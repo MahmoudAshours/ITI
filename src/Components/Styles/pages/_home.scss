@@ -1,0 +1,495 @@
+    .subscribe {
+        background-color: $main-color;
+        padding: 6rem;
+        text-align: center;
+        @include flex();
+        flex-direction: column;
+        p {
+            font-size: 1.8rem;
+            color: $semi-black;
+            text-transform: capitalize;
+            width: 40rem;
+        }
+        .heading-subs {
+            font-size: 4rem;
+            text-transform: uppercase;
+            font-weight: 400;
+            color: $semi-black;
+            letter-spacing: 1rem;
+        }
+        .carouselDiv {
+            z-index: '1';
+        }
+        form {
+            width: 100%;
+            text-align: center;
+            @include flex();
+            flex-direction: column;
+            input {
+                width: 40rem;
+                padding: 2rem 1rem;
+                border-radius: 80rem;
+                border: 1px solid #e8dede;
+                outline: none;
+                text-align: justify;
+            }
+            .alert {
+                padding: 1rem 2rem;
+                font-size: 1.8rem;
+                display: inline;
+                color: #155724;
+                width: 40rem;
+                &__suc {
+                    color: #155724;
+                    background: #d4edda;
+                }
+                &__red {
+                    color: #721c24;
+                    background-color: #f8d7da;
+                }
+                &__info {
+                    color: #721c24;
+                    background-color: #f8d7da;
+                }
+                //visibility: hidden
+            }
+        }
+    }
+    
+    .hidden {
+        display: none !important;
+    }
+    
+    .visble {
+        animation: dis .5s ease-in-out;
+        width: 100%;
+    }
+    
+    @keyframes dis {
+        0% {
+            display: block;
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    
+    .shadow-pop-tr {
+        -webkit-animation: shadow-pop-tr .3s cubic-bezier(.47, 0.000, .745, .715) both;
+        animation: shadow-pop-tr .3s cubic-bezier(.47, 0.000, .745, .715) both
+    }
+    
+    @-webkit-keyframes shadow-pop-tr {
+        0% {
+            box-shadow: 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e;
+            -webkit-transform: translateX(0) translateY(0);
+            transform: translateX(0) translateY(0)
+        }
+        100% {
+            box-shadow: 1px -1px #3e3e3e, 2px -2px #3e3e3e, 3px -3px #3e3e3e, 4px -4px #3e3e3e, 5px -5px #3e3e3e, 6px -6px #3e3e3e, 7px -7px #3e3e3e, 8px -8px #3e3e3e;
+            -webkit-transform: translateX(-8px) translateY(8px);
+            transform: translateX(-8px) translateY(8px)
+        }
+    }
+    
+    @keyframes shadow-pop-tr {
+        0% {
+            box-shadow: 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e;
+            -webkit-transform: translateX(0) translateY(0);
+            transform: translateX(0) translateY(0)
+        }
+        100% {
+            box-shadow: 1px -1px #3e3e3e, 2px -2px #3e3e3e, 3px -3px #3e3e3e, 4px -4px #3e3e3e, 5px -5px #3e3e3e, 6px -6px #3e3e3e, 7px -7px #3e3e3e, 8px -8px #3e3e3e;
+            -webkit-transform: translateX(-8px) translateY(8px);
+            transform: translateX(-8px) translateY(8px)
+        }
+    }
+    
+    .container-fluid {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        overflow: hidden;
+        .col {
+            height: 30rem;
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            background-size: cover;
+            background-position: center;
+            transition: all .4s ease-in-out;
+            .cont {
+                width: 100%;
+                position: relative;
+                background: rgba(0, 0, 0, 0.5);
+                height: 30rem;
+                transition: all .6s ease-in-out;
+            }
+            &:hover {
+                & .heaing-bottom-up {
+                    display: block;
+                    transition: all .6s ease-in-out;
+                }
+                & .cont {
+                    background: transparent;
+                }
+            }
+        }
+    }
+    
+    .vote {
+        padding: 8rem 2rem;
+        background: $main-color;
+        @include flex();
+        width: 100%;
+        flex-direction: column;
+        h1 {
+            margin-top: 6rem;
+            font-size: 2.9rem;
+            text-transform: uppercase;
+            font-weight: 400;
+            color: $semi-black;
+            letter-spacing: 1rem;
+            text-align: center;
+            // background: $semi-black;
+            color: #000;
+        }
+    }
+    
+    .all-teams {
+        .search {
+            width: 100%;
+            text-align: center;
+            @include flex(flex, space-evenly, center);
+            background: $main-color;
+            padding: 3rem 0;
+            .add-new {
+                font-size: 2rem;
+                color: $semi-black;
+                cursor: pointer;
+                padding: 1.5rem 2rem;
+                background-color: $nba-color;
+                color: #fff;
+                transition: all .1s ease-in-out !important;
+                &:hover {
+                    box-shadow: 0rem 1.3rem 1rem rgba(0, 0, 0, 0.274);
+                    transform: translateY(-.3rem) scale(1.01);
+                }
+                i {
+                    font-size: 2rem;
+                    margin-left: .5rem;
+                    color: #fff;
+                }
+            }
+        }
+        form {
+            input {
+                width: 40rem;
+                padding: 2rem 1rem;
+                border-radius: 80rem;
+                border: 1px solid #e8dede;
+                outline: none;
+                text-align: justify;
+            }
+        }
+        .menu {
+            width: 100%;
+            .container-fluid {
+                width: 100%;
+                .row {
+                    width: 100%;
+                    text-align: center;
+                    margin: 5rem 0;
+                    .team-logo {
+                        width: 60%;
+                    }
+                }
+            }
+        }
+    }
+    
+    .all-teams {
+        text-align: center;
+    }
+    
+    .menu {
+        margin-top: 4rem;
+        width: 100%;
+        @include flex();
+        flex-wrap: wrap;
+        .col-1-4 {
+            display: inline;
+            width: 25%;
+            img {
+                width: 18rem;
+                margin-top: 2rem;
+            }
+        }
+    }
+    
+    .all-teams {
+        width: 100%;
+        text-align: center;
+        @include flex(flex, space-evenly, center);
+        background: $main-color;
+        padding: 3rem 0;
+        input {
+            width: 40rem;
+            padding: 2rem 1rem;
+            border-radius: 80rem;
+            border: 1px solid #e8dede;
+            outline: none;
+            text-align: justify;
+        }
+    }
+    
+    .add {
+        // background: $main-color;    
+        background-image: url('/images/basket.jpg');
+        background-size: cover;
+        background-position: right;
+        .right {
+            width: 55%;
+            background-color: rgba(202, 199, 199, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            clip-path: polygon(0 0, 100% 0%, 88% 100%, 0% 100%);
+            form {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                // background: #23282b;
+                padding: 3rem 0;
+                width: 100%;
+                input {
+                    width: 35rem;
+                    padding: 1rem 1rem;
+                    border-radius: 30rem;
+                    border: 1px solid #e8dede;
+                    outline: none;
+                    text-align: justify;
+                    margin-bottom: .5rem;
+                }
+                textarea {
+                    border-radius: 1rem;
+                    border: 1px solid #e8dede;
+                    outline: none;
+                    padding: 1rem;
+                }
+                button {
+                    color: #fff;
+                    background-color: $nba-color;
+                    padding: .5rem 3rem;
+                    margin-top: .5rem;
+                    border-radius: 3rem;
+                    font-weight: 400;
+                    font-size: 1.6rem;
+                }
+            }
+        }
+    }
+    
+    .main {
+        width: 100%;
+        .head {
+            width: 100;
+            @include flex(flex,
+            space-between,
+            center);
+            flex-wrap: wrap;
+            padding: 2rem 1rem;
+            background: $main-color;
+            .right {
+                .add-new {
+                    font-size: 2rem;
+                    color: $semi-black;
+                    cursor: pointer;
+                    margin-right: 3rem;
+                    padding: 1.5rem 2rem;
+                    background-color: $nba-color;
+                    color: #fff;
+                    transition: all .3s ease-in-out;
+                    &:hover {
+                        box-shadow: 0rem 1.3rem 1rem rgba(0, 0, 0, 0.274);
+                        transform: translateY(-.3rem) scale(1.01);
+                    }
+                    i {
+                        font-size: 2rem;
+                        margin-left: .5rem;
+                        color: #fff;
+                    }
+                }
+            }
+            .left {
+                @include flex();
+                .logo {
+                    img {
+                        width: 17rem;
+                    }
+                }
+            }
+        }
+    }
+    
+    .players {
+        padding: 2rem 5%;
+        .menu {
+            width: 100%;
+            @include flex();
+            flex-wrap: wrap;
+            text-align: center;
+            .col-1-4 {
+                background-color: $main-color;
+                display: inline;
+                width: 24%;
+                margin-bottom: 2rem;
+                height: 340px;
+                &:not(:last-child) {
+                    margin-right: 1rem;
+                }
+                transition: all .3s ease-in-out;
+                &:hover {
+                    box-shadow: 0rem 1.3rem 1rem rgba(0, 0, 0, 0.274);
+                    transform: translateY(-.3rem) scale(1.01);
+                }
+                border: 1px solid #dcd6d696;
+                img {
+                    width: 17rem;
+                }
+                h1 {
+                    color: $nba-color;
+                    text-transform: uppercase;
+                }
+                ul {
+                    list-style-type: none;
+                    li {
+                        font-size: 1.2rem;
+                        text-transform: capitalize;
+                    }
+                }
+            }
+        }
+    }
+    
+    .new-poll {
+        width: 100%;
+        padding: 10rem 5rem;
+        background: $semi-black;
+        .content {
+            @include flex();
+            padding: 10rem;
+            background: #fff;
+            flex-wrap: wrap;
+            .cardnew {
+                text-align: center;
+                padding: 20px;
+                border: 1px solid #dcd6d696;
+                &:not(:last-child) {
+                    margin-right: 3rem;
+                }
+                img {
+                    width: 18rem;
+                    margin-bottom: 3rem;
+                    cursor: pointer;
+                    &:hover {
+                        -webkit-animation: pulsate-bck .5s ease-in-out infinite both;
+                        animation: pulsate-bck .5s ease-in-out infinite both
+                    }
+                }
+                p {
+                    font-size: 2rem;
+                    text-transform: capitalize;
+                }
+            }
+        }
+    }
+    
+    .content {
+        @include flex();
+        padding: 10rem;
+        background: #fff;
+        flex-wrap: wrap;
+        text-align: center;
+        .card-new {
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #dcd6d696;
+            &:not(:last-child) {
+                margin-right: 3rem;
+            }
+            img {
+                width: 18rem;
+                margin-bottom: 3rem;
+                cursor: pointer;
+            }
+            p {
+                font-size: 2rem;
+                text-transform: capitalize;
+            }
+        }
+    }
+    
+    @media only screen and (max-width: 888px) {
+        .heading {
+            font-size: 3rem
+        }
+    }
+    
+    @media only screen and (max-width: 900px) {
+        .players .menu .col-1-4 {
+            width: 45%;
+        }
+        .content {
+            padding: 10rem 0 !important;
+        }
+    }
+    
+    @media only screen and (max-width:720px) {
+        .menu .col-1-4 {
+            width: 45%;
+        }
+        .content {
+            flex-direction: column;
+            .cardnew {
+                width: 50%;
+                overflow: hidden;
+                margin-right: 0 !important;
+                margin-bottom: 3rem;
+                img {
+                    width: 15rem !important;
+                }
+            }
+        }
+    }
+    
+    @media only screen and (max-width: 660px) {
+        .main .head {
+            @include flex();
+            flex-direction: column;
+            .left {
+                margin: 2rem 0;
+            }
+            .right {
+                transform: translateX(-3rem)
+            }
+        }
+        .all-teams .search {
+            @include flex();
+            flex-direction: column;
+            form {
+                margin-bottom: 3rem;
+            }
+        }
+    }
+    
+    @media only screen and (max-width: 800px) {
+        .add {
+            .right {
+                width: 100%;
+                clip-path: none;
+            }
+        }
+    }

@@ -1,0 +1,78 @@
+body {
+    background-color: #EAEAEA;
+}
+
+.coversDiv {
+    display: inline;
+}
+
+.coversImg {
+    display: inline-block;
+    width: 180px;
+    height: 160px;
+}
+
+hr {
+    border-color: #2196F3;
+}
+
+h2 {
+    font-size: 40px;
+    font-weight: 100;
+    margin: 20px;
+    font-family: tahoma;
+    color: #2C2C2C;
+}
+
+.detailDiv {}
+
+.mainDiv {
+    display: inline-block;
+}
+
+.musicDBName {
+    position: absolute;
+    bottom: 40px;
+}
+
+.detailImg {
+    width: 150px;
+    height: 150px;
+}
+
+.musicdb {
+    font-family: 'Monoton';
+    font-size: 60px;
+    position: relative;
+    top: 400px;
+    color: white;
+}
+
+.detailName {
+    font-size: 40px;
+    font-weight: 600;
+    margin: 5px;
+    color: #2C2C2C;
+}
+
+.detailBio {
+    font-size: 25px;
+    font-weight: 300;
+    margin: 30px;
+    color: #000;
+}
+
+.itemButton {
+    position: absolute;
+    top: 250px;
+    height: 50px;
+    width: 130px;
+    border: 0px;
+    font-size: 19px;
+    color: white;
+    background-color: #2196F3;
+}
+
+.itemDiv {
+    position: relative;
+}

@@ -1,0 +1,11 @@
+@mixin flex($display:flex , $justify-content:center , $align-items: center){
+    display: $display;
+   justify-content: $justify-content;
+   align-items: $align-items;
+ }
+  @mixin anchor($fs:1.6rem ,$c:#191919){
+    text-transform: capitalize;
+    text-decoration: none;
+    font-size:$fs;
+    color: $c;
+  }

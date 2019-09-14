@@ -1,0 +1,68 @@
+.heading {
+    color: #fff;
+    position: absolute;
+    z-index: 20200000;
+    top: 0;
+    width: 50%;
+    right: 5%;
+    font-size: 8rem;
+    text-align: right;
+    text-transform: uppercase;
+    font-family: 'Roboto';
+    padding: 2rem;
+    width: 40%;
+    span {
+        display: block;
+        font-size: 3rem;
+        font-weight: 600;
+        color: $main-color;
+    }
+}
+
+.heaing-bottom-up {
+    background: rgba($semi-black, .8);
+    color: #fff;
+    font-size: 2rem;
+    text-align: center;
+    position: absolute;
+    bottom: -5px;
+    display: none;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    transition: all .6s ease-in-out;
+}
+
+.name {
+    margin-left: 2rem;
+    font-size: 2.5rem;
+    color: $nba-color;
+    text-transform: uppercase;
+}
+
+.disc {
+    margin-top: 5rem;
+    padding: 1rem 10%;
+    h1 {
+        font-size: 3rem;
+        color: $semi-black;
+        text-transform: uppercase;
+    }
+    p {
+        margin-top: 2rem;
+        font-size: 1.6rem;
+        color: $semi-black;
+        text-align: justify;
+        text-transform: capitalize;
+    }
+}
+
+.home {
+    position: relative;
+}
+
+.heading {
+    color: #fff;
+    //top: -3rem;
+    font-size: 3rem;
+}
